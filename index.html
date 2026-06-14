@@ -1,102 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juliette Valerie Laurent</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Juliette Archive</title>
 
-    <style>
-        body {
-            margin: 0;
-            background: #f8f5f0;
-            font-family: Georgia, serif;
-            color: #2d2d2d;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background: #f8f5f0;
+    color: #2d2d2d;
+}
 
-        .hero {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(#f8f5f0, #e6d8c9);
-            text-align: center;
-        }
+/* HEADER */
+header {
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(#f8f5f0, #e6d8c9);
+}
 
-        h1 {
-            font-size: 4rem;
-            margin-bottom: 10px;
-            letter-spacing: 3px;
-        }
+header h1 {
+    font-size: 60px;
+    letter-spacing: 4px;
+    margin: 0;
+}
 
-        p {
-            color: #777;
-            font-size: 1.2rem;
-        }
+header p {
+    color: #777;
+}
 
-        button {
-            margin-top: 30px;
-            padding: 15px 35px;
-            border: none;
-            background: #e88a7d;
-            color: white;
-            font-size: 18px;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+/* SEARCH */
+#searchBar {
+    margin-top: 20px;
+    padding: 12px;
+    width: 60%;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
 
-        button:hover {
-            transform: scale(1.05);
-        }
+/* SECTIONS */
+section {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
 
-        .about {
-            max-width: 800px;
-            margin: auto;
-            padding: 80px 20px;
-        }
+/* CARD STYLE */
+.card {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    cursor: pointer;
+}
 
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            margin-top: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,.08);
-        }
-    </style>
+/* HIDDEN CONTENT */
+.hidden {
+    display: none;
+}
+
+/* TIMELINE */
+.timeline {
+    border-left: 2px solid #e88a7d;
+    padding-left: 20px;
+}
+
+.year {
+    margin-bottom: 20px;
+}
+
+/* FLIP CARD */
+.flip {
+    background: transparent;
+    perspective: 1000px;
+}
+
+.flip-inner {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip:hover .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-front, .flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+
+.flip-back {
+    transform: rotateY(180deg);
+}
+</style>
 </head>
 
 <body>
 
-<div class="hero">
+<header>
     <h1>JULIETTE</h1>
-    <p>Actress • Artist • Archive</p>
+    <p>Vintage Archive • Actress • Artist</p>
 
-    <button onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
-        Explore
-    </button>
+    <input id="searchBar" placeholder="Search your archive..." onkeyup="search()">
+</header>
+
+<!-- ABOUT -->
+<section>
+<h2>About Me</h2>
+
+<div class="card" onclick="toggle(this)">
+Juliette Valerie Laurent
+<div class="hidden">
+<p>Born: 25 September 2008</p>
+<p>Height: 170 cm</p>
+<p>Languages: French, English, Dutch, Portuguese, German</p>
+<p>Personality: Smart, introverted, creative</p>
+</div>
+</div>
+</section>
+
+<!-- CAREER -->
+<section>
+<h2>Career Timeline</h2>
+
+<div class="timeline">
+
+<div class="year card">
+<b>2023</b>
+<p>Silly Girls</p>
 </div>
 
-<div class="about" id="about">
+<div class="year card">
+<b>2024</b>
+<p>Aftershock</p>
+</div>
 
-    <h2>About Me</h2>
+<div class="year card">
+<b>2025–2026</b>
+<p>Runners</p>
+</div>
 
-    <div class="card">
-        <h3>Juliette Valerie Laurent</h3>
+<div class="year card">
+<b>2027</b>
+<p>The Space I Took Up • Liminal</p>
+</div>
 
-        <p><strong>Birthday:</strong> 25 September 2008</p>
-
-        <p><strong>Height:</strong> 170 cm (5'7")</p>
-
-        <p><strong>Personality:</strong> Smart, introverted, kind, creative, passionate.</p>
-
-        <p><strong>Languages:</strong> French, English, a little Dutch, Portuguese and German.</p>
-
-        <p><strong>Hobbies:</strong> Painting, acting, and anything creative.</p>
-
-    </div>
+<div class="year card">
+<b>2028</b>
+<p>Neon Streets</p>
+</div>
 
 </div>
+</section>
+
+<!-- RELATIONSHIPS -->
+<section>
+<h2>Relationships</h2>
+
+<div class="flip">
+<div class="flip-inner">
+<div class="flip-front">
+Noah Calder
+</div>
+<div class="flip-back">
+Relationship: 2025–2026
+</div>
+</div>
+</div>
+
+</section>
+
+<script>
+function toggle(el) {
+    el.querySelector(".hidden").classList.toggle("hidden");
+}
+
+function search() {
+    let input = document.getElementById("searchBar").value.toLowerCase();
+    let cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+        let text = card.innerText.toLowerCase();
+        if (text.includes(input)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
+</script>
 
 </body>
 </html>
