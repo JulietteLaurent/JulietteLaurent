@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Friends | Juliette Archive</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background: #f8f5f0;
+    color: #2d2d2d;
+}
+
+/* top bar */
+.nav {
+    padding: 20px;
+    background: #e6d8c9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #2d2d2d;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+/* page title */
+.header {
+    text-align: center;
+    padding: 60px 20px 30px;
+}
+
+.header h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+
+/* grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 40px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* flip card */
+.card {
+    perspective: 1000px;
+}
+
+.inner {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .inner {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* front */
+.front {
+    background: white;
+}
+
+/* back */
+.back {
+    background: #e88a7d;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/* name style */
+.name {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.small {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+</style>
+</head>
+
+<body>
+
+<div class="nav">
+    <div><strong>Juliette Archive</strong></div>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="friends.html">Friends</a>
+    </div>
+</div>
+
+<div class="header">
+    <h1>Friends</h1>
+    <p>People in Juliette’s world</p>
+</div>
+
+<div class="grid">
+
+    <!-- Friend 1 -->
+    <div class="card">
+        <div class="inner">
+            <div class="front">
+                <div>
+                    <div class="name">Madeline Argy</div>
+                    <div class="small">Friend</div>
+                </div>
+            </div>
+            <div class="back">
+                <div>
+                    <div><strong>Notes</strong></div>
+                    <p>Close friend, shared creative energy, lots of memories together.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Friend 2 -->
+    <div class="card">
+        <div class="inner">
+            <div class="front">
+                <div>
+                    <div class="name">Walker Scobell</div>
+                    <div class="small">Friend</div>
+                </div>
+            </div>
+            <div class="back">
+                <div>
+                    <div><strong>Notes</strong></div>
+                    <p>Connected through work and shared projects.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Friend 3 -->
+    <div class="card">
+        <div class="inner">
+            <div class="front">
+                <div>
+                    <div class="name">Maya Lenoir</div>
+                    <div class="small">Friend</div>
+                </div>
+            </div>
+            <div class="back">
+                <div>
+                    <div><strong>Notes</strong></div>
+                    <p>Long-time friend with shared history and inside jokes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
