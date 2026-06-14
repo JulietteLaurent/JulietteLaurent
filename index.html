@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juliette Valerie Laurent</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #f8f5f0;
+            font-family: Georgia, serif;
+            color: #2d2d2d;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(#f8f5f0, #e6d8c9);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            letter-spacing: 3px;
+        }
+
+        p {
+            color: #777;
+            font-size: 1.2rem;
+        }
+
+        button {
+            margin-top: 30px;
+            padding: 15px 35px;
+            border: none;
+            background: #e88a7d;
+            color: white;
+            font-size: 18px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        .about {
+            max-width: 800px;
+            margin: auto;
+            padding: 80px 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.08);
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="hero">
+    <h1>JULIETTE</h1>
+    <p>Actress • Artist • Archive</p>
+
+    <button onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+        Explore
+    </button>
+</div>
+
+<div class="about" id="about">
+
+    <h2>About Me</h2>
+
+    <div class="card">
+        <h3>Juliette Valerie Laurent</h3>
+
+        <p><strong>Birthday:</strong> 25 September 2008</p>
+
+        <p><strong>Height:</strong> 170 cm (5'7")</p>
+
+        <p><strong>Personality:</strong> Smart, introverted, kind, creative, passionate.</p>
+
+        <p><strong>Languages:</strong> French, English, a little Dutch, Portuguese and German.</p>
+
+        <p><strong>Hobbies:</strong> Painting, acting, and anything creative.</p>
+
+    </div>
+
+</div>
+
+</body>
+</html>
